@@ -1,6 +1,6 @@
 .input {
     min-width: 700px;
-    min-height: 362px;
+    /* min-height: 362px; */
     max-width: 700px;
     
    
@@ -10,11 +10,11 @@
     padding: 0px;
     /* position: rel; */
     border-radius: 10px;
-    box-shadow: #E5E7EB 10px 10px 10px 20px;
+    box-shadow: black  8px 10px 20px;
 }
 #section-1{
     min-width: 700px;
-    height: 100px;
+    /* min-height: 100px; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -40,7 +40,7 @@
     max-width: 700px;
     padding: 20px 20px;
     border-bottom: 2px solid #E5E7EB;
-    
+    /* height: 200px; */
 }
 .input-div{
     display: flex;
@@ -75,6 +75,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    /* overflow-y: auto; */
 }
 .oslash-logo{
     display: flex;
@@ -84,15 +85,20 @@
 }
 .oslash-logo img{
     width: 50px;
+    height: 50px;
     border-radius: 50%;
 }
 #section-3{
-  min-width: 700px;
-    max-width: 700px;
+    width: 700px;
+    max-width: 800px;
+    min-height:70px ;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 20px;
     padding-left: 20px;
     padding-right: 35px;
+    background-color: #f1f2f6;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
