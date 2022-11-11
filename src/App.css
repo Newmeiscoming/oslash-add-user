@@ -5,7 +5,7 @@
  
 }
 
-/* .App button{
+#share{
   font-size: 20px;
   padding: 10px 17px;
   border-radius: 5px;
@@ -15,4 +15,5 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-} */
+  margin-bottom: 10px;
+}

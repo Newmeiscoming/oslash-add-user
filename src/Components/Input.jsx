@@ -7,7 +7,7 @@ import { Context } from "../App";
 import logo from "../Assets/logo.svg";
 
 
-const Input = () => {
+const Input = ({display}) => {
     const {arr} = useContext(Context);
     const oslash = {
         name:"Everyone at OSlash",
@@ -17,7 +17,7 @@ const Input = () => {
     };
     console.log(arr);
   return (
-    <div className="input">
+    <div style={{display}} className="input">
       <section id="section-1">
         <div className="shareweb">
           <div>
