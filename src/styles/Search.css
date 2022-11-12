@@ -5,7 +5,7 @@
     min-height: 450px;
     max-height: 450px;
     border-radius: 10px;
-    box-shadow: black  8px 10px 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 #sec-1{
     background-color: yellow;

@@ -7,6 +7,7 @@ import { persons,groups } from '../Assets/Data'
 import Footer from './Footer'
 import Vector from "../Assets/Vector.svg"
 import { Context } from '../App'
+import { useNavigate } from 'react-router-dom'
 
 const Search = () => {
     const [access,setAccess] = useState("Full Access")
@@ -16,6 +17,7 @@ const Search = () => {
     const [visibility,setVisibility] = useState("visible");
     const [display,setDisplay] = useState("none");
     const {user,setUser} = useContext(Context);
+    const navigate = useNavigate();
     
     function searchUser(name){
         const filterData = persons.filter((data) => {
@@ -78,6 +80,7 @@ const Search = () => {
             if (ele === "No Access") color = "red";
             return (
               <li
+                
                 onClick={() => {setAccess(ele)
                 setPill({...pill,access:ele})}}
                 style={{ color, fontSize: "18px" }}
@@ -90,26 +93,28 @@ const Search = () => {
         </ul>
       </div>   
       <div style={{paddingRight:"20px"}}><button onClick={()=>{
-        
         setUser(pill);
+        navigate("/")
+        
+
       }} id='invite'>Invite</button></div>    
         </section>
         <section id='sec-2'>
             <p style={{fontSize:"23px",margin:0}}>Select a person</p>
-            <div id='sec-2-person'>
+            <ul id='sec-2-person'>
                 {filter.map((person)=>{
                     return(
-                        <div onClick={()=>{
+                        <li onClick={()=>{
                             setPill({...pill,name:person.name,img:person.img,email:person.email,grp:false});
                             setVisibility("hidden");
                             setDisplay("block");
                         }} id='person'>
                             <img style={{width:"35px",height:"35px",borderRadius:"50%"}} src={person.img} alt="" />
                         <p  style={{marginLeft:"15px",fontSize:"21px"}}>{person.name}</p>
-                        </div>
+                        </li>
                     )
                 })}
-            </div>
+            </ul>
             <p  style={{marginTop:"10px",fontSize:"23px",margin:0}}>Select a group</p>
             <div id='sec-2-person'>
                 {filterGroup.map((group)=>{

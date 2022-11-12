@@ -28,7 +28,7 @@ function App() {
       <button onClick={()=>setDisplay("block")} id='share'>Share &nbsp;<HiShare/></button>
       <Routes>
       <Route path='/' element={<Input display={display}/>}/>
-      <Route path='/search' element={<Search/>} />
+      <Route path='/add' element={<Search/>} />
       </Routes>
     </div>
       </Context.Provider>

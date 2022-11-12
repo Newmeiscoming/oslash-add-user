@@ -5,9 +5,11 @@ import Users from "./Users";
 import Footer from "./Footer";
 import { Context } from "../App";
 import logo from "../Assets/logo.svg";
+import { useNavigate } from "react-router-dom";
 
 
 const Input = ({display}) => {
+    const navigate = useNavigate();
     const {arr} = useContext(Context);
     const oslash = {
         name:"Everyone at OSlash",
@@ -15,7 +17,7 @@ const Input = ({display}) => {
         email:"25 workspace members",
         access:"No access"
     };
-    console.log(arr);
+    
   return (
     <div style={{display}} className="input">
       <section id="section-1">
@@ -44,18 +46,20 @@ const Input = ({display}) => {
               height: "32px",
               color: "white",
               border: "none",
+              cursor:"pointer"
             }}
+
           />
         </div>
       </section>
       <section id="section-2">
         <div className="input-div">
-          <input type="text" placeholder="People, emails, groups" />
+          <input type="text" placeholder="People, emails, groups" onClick={()=>navigate("/add")} />
           <button>Invite</button>
         </div>
-        <div>
+        <div  style={{overflowY:"scroll",minHeight:"250px",maxHeight:"250px"}}>
             <Users person={oslash}/>
-        {arr.map((person,i)=>{
+        {arr.map((person)=>{
             
             return <Users person={person}/>
         })}
